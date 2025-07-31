@@ -35,6 +35,8 @@ def index():
             ws = wb.active
             ws.append(["Email ente", "Data invio", "Nome file"])
             wb.save(log_file)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=10000)
 
         # Carica il file di log
         wb = load_workbook(log_file)
