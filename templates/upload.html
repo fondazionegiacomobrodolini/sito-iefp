@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carica dati - {{ ente }}</title>
+</head>
+<body>
+    <h2>Carica dati per: {{ ente }}</h2>
+
+    {% if success %}
+        <p style="color: green;">{{ success }}</p>
+    {% endif %}
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Carica</button>
+    </form>
+</body>
+</html>

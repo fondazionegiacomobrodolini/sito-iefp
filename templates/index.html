@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Caricamento File - Fondazione Giacomo Brodolini</title>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='logo_fgb.png') }}" alt="Logo FGB" style="width: 300px;">
+    <h1>Portale di caricamento dati</h1>
+    <p>Gentile ente, inserisca il suo indirizzo email e carichi i file richiesti. I dati saranno trattati secondo normativa GDPR.</p>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="email">Email dell'ente:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label for="file">Carica i file:</label><br>
+        <input type="file" name="file" multiple required><br><br>
+
+        <button type="submit">Invia</button>
+    </form>
+</body>
+</html>
